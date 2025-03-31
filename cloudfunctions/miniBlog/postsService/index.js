@@ -1,8 +1,8 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
-
+// const config = require('polaris/utils/config.js');
 cloud.init({
-  env: 'hu2419-2g5edmmqa8bf6bd8'
+  env: "cloud1-6g8720d46b015985"
 })
 
 const Towxml = require('towxml');

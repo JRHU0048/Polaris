@@ -24,7 +24,7 @@
     "pages/admin/isShow/isshow",
     "pages/admin/kindList/kindList",
     "pages/mine/workupload/workupload",
-    "pages/chatroom/chatroom",
+    "pages/competition/competition",
     "pages/topic/topiclist/QAcommunity/QAcommunity",
     "pages/mine/login/login",
     "pages/mine/changePassword/changePassword",
@@ -50,16 +50,10 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/topic/topic",
-        "iconPath": "/images/tab/function.png",
-        "selectedIconPath": "/images/tab/function_clicked.png",
-        "text": "专题"
-      },
-      {
-        "pagePath": "pages/chatroom/chatroom",
+        "pagePath": "pages/competition/competition",
         "iconPath": "/images/tab/contact.png",
         "selectedIconPath": "/images/tab/contact_clicked.png",
-        "text": "组队"
+        "text": "竞赛"
       },
       {
         "pagePath": "pages/mine/mine",

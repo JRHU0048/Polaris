@@ -245,7 +245,8 @@ function getPostsList(page, filter, isShow, orderBy, label, classify) {
   }
 
   if (orderBy == undefined || orderBy == "") {
-    orderBy = "_createTime"
+    // orderBy = "_createTime"
+    orderBy = "formattedDate"; // 默认按日期排序
   }
   
   // 分类过滤
@@ -275,7 +276,8 @@ function getPostsList(page, filter, isShow, orderBy, label, classify) {
       classify: true,
       label: true,
       abstract: true,
-      _createTime: true
+      // _createTime: true
+      formattedDate: true // 查询格式化后的日期字段
     }).get()
 }
 

@@ -1,6 +1,6 @@
 <import src="/templates/nodata.wxml" />
 
-<!-- swiper -->
+<!-- 轮播图 -->
 <view class="padding-bottom-xs padding-lr" style="background: linear-gradient(to bottom, #008e8f, #FFFFFF);" wx:if="{{swiperList.length > 0}}">
   <swiper class="screen-swiper square-dot" style="overflow:hidden; border-radius:32rpx;transform: translateY(0);" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
     <swiper-item wx:for="{{swiperList}}" wx:key="item" id="{{item.postId}}" data-db="mini_posts" bindtap="bindPostDetail">
@@ -10,31 +10,9 @@
   </swiper>
 </view>
 
-<!-- 分类跳转 -->
-<view class="cu-list grid col-3 no-border text-black">
-  <view class="cu-item" wx:for="{{iconList}}" wx:key="idx" bindtap="{{item.bindtap}}">
-    <view class="cuIcon-{{item.icon}} text-{{item.color}} text-shadow">
-      <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
-        <block wx:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
-      </view>
-    </view>
-    <text>{{item.name}}</text>
-  </view>
-</view>
 
 <!-- 搜索栏 -->
 <view class='box'>
-  <form bindsubmit='bindconfirm'>
-    <view class="cu-bar search bg-white">
-      <view class='search-form round'>
-        <text class="cuIcon-search"></text>
-        <input type="text" placeholder="搜索感兴趣的内容" value="{{defaultSearchValue}}" bindconfirm="bindconfirm" name="searchContent" confirm-type="search"></input>
-      </view>
-      <view class="action" wx:if="{{cancel}}" bindtap='onPullDownRefresh'>
-        <text class="text-orange">取消</text>
-      </view>
-    </view>
-  </form>
   <scroll-view scroll-x class="bg-white nav solid-bottom">
     <view class="flex text-center">
       <view wx:for="{{navItems}}" wx:key="idx" wx:for-index="idx" data-data="{{item}}" class="cu-item flex-sub {{item.index==tabCur?'text-orange cur':'text-black'}}" bindtap='tabSelect' data-id="{{item.index}}">
@@ -66,26 +44,21 @@
       <view class="cu-item shadow-warp bg-white">
         <view class="flex">
           <view class="title text-cut" style="max-width:580rpx">{{item.title}}</view>
-          <block wx:for="{{item.label}}" wx:key="idxx" wx:for-item="itemm">
-            <view class="margin-tb-sm cu-tag bg-mauve light sm round" wx:if="{{itemm}}">{{itemm}}</view>
-          </block>
         </view>
         <view class="content">
           <image src="{{item.defaultImageUrl}}" mode="aspectFill"></image>
           <view class="desc">
             <view class="text-content text-black">{{item.abstract}}</view>
             <view class="flex text-gray text-sm">
-              <view class='flex-sub text-left padding-left-xxs' wx:if="{{item._createTime}}">
+              <view class='flex-sub text-left padding-left-xxs' wx:if="{{item.formattedDate}}">
                 <text class="cuIcon-time"></text>
-                {{m1.format(item._createTime)}}
+                {{item.formattedDate}}
               </view>
               <view class='flex-sub text-right padding-right-sm'>
                 <text class="cuIcon-attention" />
                 {{item.totalVisits}}
                 <text class="cuIcon-like padding-left-xs" />
                 {{item.totalZans}}
-                <text class="cuIcon-message padding-left-xs" />
-                {{item.totalComments}}
               </view>
             </view>
           </view>

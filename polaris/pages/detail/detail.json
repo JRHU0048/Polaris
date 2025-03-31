@@ -1,5 +1,7 @@
 {
   "navigationBarTitleText": "Loading...",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
   "usingComponents": {
     "towxml": "/towxml/towxml",
     "poster": "/components/test/poster"

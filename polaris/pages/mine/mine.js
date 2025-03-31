@@ -16,41 +16,41 @@ Page({
     studentId:"",
     isLoggedIn: false,
     iconList: [
-      {
-        icon: 'favorfill',
-        color: 'orange',
-        badge: 0,
-        name: '我的收藏',
-        bindtap: "bindCollect"
-      },
-      {
-        icon: 'likefill',
-        color: 'red',
-        badge: 0,
-        name: '我的点赞',
-        bindtap: "bindZan"
-      },
-      {
-        icon: 'mark',
-        color: 'yellow',
-        badge: 0,
-        name: '我的消息',
-        bindtap: "bindNotice"
-      },
+      // {
+      //   icon: 'favorfill',
+      //   color: 'orange',
+      //   badge: 0,
+      //   name: '我的收藏',
+      //   bindtap: "bindCollect"
+      // },
+      // {
+      //   icon: 'likefill',
+      //   color: 'red',
+      //   badge: 0,
+      //   name: '我的点赞',
+      //   bindtap: "bindZan"
+      // },
+      // {
+      //   icon: 'mark',
+      //   color: 'yellow',
+      //   badge: 0,
+      //   name: '我的消息',
+      //   bindtap: "bindNotice"
+      // },
       {
         icon: 'upload',
         color: 'orange',
         badge: 0,
-        name: '作品上传',
+        name: '上传材料',
         bindtap: "Workupload"
       },
-      {
-        icon: 'file',
-        color: 'orange',
-        badge: 0,
-        name: '报销管理',
-        bindtap: "showResource"
-      },
+      // {
+      //   icon: 'file',
+      //   color: 'orange',
+      //   badge: 0,
+      //   name: '报销管理',
+      //   bindtap: "showResource"
+      // },
       {
         icon:'settingsfill',
         color:'blue',

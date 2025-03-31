@@ -25,21 +25,3 @@
   </view>
   <button bindtap="submit" class="submit-btn">提交</button>
 </view>
-
-<!-- pages/mine/login/login.wxml
-<view class="container">
-  <view class="input-group">
-    <text>学号:</text>
-    <input type="text" placeholder="请输入学号" bindinput="bindStudentIdInput" />
-  </view>
-  <view class="input-group">
-    <text>姓名:</text>
-    <input type="text" placeholder="请输入姓名" bindinput="bindNameInput" />
-  </view>
-  <view class="input-group">
-    <text>头像:</text>
-    <button bindtap="chooseImage">选择头像</button>
-    <image src="{{avatarUrl}}" mode="aspectFit" style="width: 100px; height: 100px;"></image>
-  </view>
-  <button bindtap="submit">提交</button>
-</view> -->

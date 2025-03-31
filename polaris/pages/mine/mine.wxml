@@ -8,11 +8,7 @@
     <view class="padding-sm margin-xs radius">
       <view class="flex align-start">
         <text class="text-xl text-black text-cut" style="max-width:440rpx">{{nickName}}</text>
-        <!-- <text class="{{vipDesc == 'VIP用户' ? 'text-orange' : 'text-grey'}} cuIcon-vip" bindtap="clickVip"></text> -->
       </view>
-      <!-- <view class="margin-top-sm" bindtap="bindPoint">
-        <text class="line-orange radius text-lg">{{totalPoints}}</text><text class="text-xs text-black"> 积分</text>
-      </view> -->
     </view>
     <view class="flex-sub text-right text-xl margin-right-xs text-grey">
       <view class="cuIcon-right" bindtap="bindAvatar"></view>
@@ -20,8 +16,8 @@
   </view>
 
   <!-- 图标按钮：收藏、点赞、信息 、作品上传-->
-  <view class="cu-list grid col-3 no-border text-black">
   <!-- 3个图标一行 -->
+  <!-- <view class="cu-list grid col-3 no-border text-black">
     <view class="cu-item" wx:for="{{iconList}}" wx:key="idx" bindtap="{{item.bindtap}}">
       <view class="cuIcon-{{item.icon}} text-{{item.color}} text-shadow">
         <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
@@ -30,45 +26,57 @@
       </view>
       <text>{{item.name}}</text>
     </view>
+  </view> -->
+  <view class="cu-list menu margin-top-sm shadow-lg sm-border">
+    <view class="cu-item arrow" wx:for="{{iconList}}" wx:key="idx" bindtap="{{item.bindtap}}">
+      <view class='content'>
+        <text class='cuIcon-{{item.icon}} text-{{item.color}} text-xl'></text>
+        <text class="text-l">{{item.name}}</text>
+        <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
+          <block wx:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
 
 
 <!-- 条带按钮:关于小程序,历史版本,联系作者,意见反馈等 -->
-<view class="cu-list menu margin-top-sm shadow-lg sm-border">
+<!-- <view class="cu-list menu margin-top-sm shadow-lg sm-border"> -->
 
   <!-- 关于小程序 -->
-  <view class="cu-item arrow" bindtap="bindAbout">
+  <!-- <view class="cu-item arrow" bindtap="bindAbout">
     <view class='content'>
       <text class='cuIcon-info text-orange text-xl'></text>
       <text class="text-l">关于小程序</text>
     </view>
-  </view>
+  </view> -->
 
   <!-- 历史版本 -->
-  <view class="cu-item arrow" bindtap='showRelease'>
+  <!-- <view class="cu-item arrow" bindtap='showRelease'>
     <view class='content' hover-class='none'>
       <text class='cuIcon-form text-blue text-xl'></text>
       <text class='text-l'>历史版本</text>
     </view>
-  </view>
+  </view> -->
+
 
   <!-- 联系作者 -->
-  <view class="cu-item">
+  <!-- <view class="cu-item">
     <button class='cu-btn content' open-type='contact'>
       <text class='cuIcon-service text-orange text-xl'></text>
       <text class='text-l'>联系作者</text>
     </button>
-  </view>
+  </view> -->
 
   <!-- 意见反馈 -->
-  <view class="cu-item">
+  <!-- <view class="cu-item">
     <button class='cu-btn content' open-type='feedback'>
       <text class='cuIcon-write text-cyan text-xl'></text>
       <text class='text-l'>意见反馈</text>
     </button>
-  </view>
+  </view> -->
 
-</view>
+<!-- </view> -->
 
 

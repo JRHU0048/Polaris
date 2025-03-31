@@ -4,7 +4,7 @@ var fileIdPre = 'cloud://test-we0f3.7465-test-we0f3-1301386292/'
 /**
  * 云开发环境
  */
-var env = "hu2419-2g5edmmqa8bf6bd8"
+var env = "cloud1-6g8720d46b015985"
 
 /**
  * 用户可以实现的操作枚举
